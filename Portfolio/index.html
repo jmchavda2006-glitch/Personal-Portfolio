@@ -3,23 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jigar Chavda | Portfolio & Resume</title>
+    <title>Jigar Chavda | Portfolio &amp; Resume</title>
+
+    <!-- SEO & Social Sharing OpenGraph Metadata -->
+    <meta name="description" content="Portfolio & Interactive Resume of Jigar Chavda — Computer Science & Design undergraduate specializing in Frontend Engineering, UI/UX Architecture, and AI Agents.">
+    <meta name="author" content="Jigar Chavda">
+    <meta property="og:title" content="Jigar Chavda | Frontend Engineer & UI/UX Designer">
+    <meta property="og:description" content="Explore Jigar Chavda's interactive engineering projects, UI/UX case studies, verified credentials, and single-page A4 resume.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jmchavda2006-glitch.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Modular Stylesheets (Divided by Section for Easy Editing) -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/professional-journey.css">
+    <link rel="stylesheet" href="css/certificates.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/get-in-touch.css">
+
+    <!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
+    <!-- Top Scroll Progress Glow Bar -->
+    <div class="scroll-progress-container" aria-hidden="true">
+        <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Smooth Custom 3D Glass Cursor -->
     <div class="custom-cursor-dot"></div>
     <div class="custom-cursor-arrow"></div>
 
+    <!-- Ambient Glass Background Lighting Blobs -->
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
+    <!-- Responsive Glassmorphic Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Jigar Chavda | <span class="gradient-text">Portfolio</span></a>
-            <ul class="nav-links">
+            <a href="#hero" class="logo">Jigar Chavda | <span class="gradient-text">Portfolio</span></a>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#hero" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#timeline">Journey</a></li>
@@ -27,490 +58,71 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="theme-toggle-wrapper">
-                    <button id="theme-toggle-btn" class="theme-btn" title="Toggle Visual Interface Theme">
+            </ul>
+
+            <div class="nav-actions">
+                <div class="theme-toggle-wrapper">
+                    <button type="button" id="theme-toggle-btn" class="theme-btn" title="Toggle Visual Interface Theme (Shortcut: T)" aria-label="Toggle Theme">
                         <i class="fas fa-moon"></i>
                     </button>
-                </li>
-            </ul>
+                </div>
+                <button type="button" id="nav-toggle-btn" class="nav-toggle-btn" title="Toggle Navigation Menu" aria-label="Toggle Navigation Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <header id="hero" class="hero-section">
-        <div class="hero-content">
-            
-            <a href="#" class="logo-link">
-                <img src="J.png" alt="Jigar Chavda Logo" class="site-logo">
-            </a>
+    <!-- Modular Section Mount Points (Populated by sections/*.js) -->
+    <main>
+        <div id="home-mount"></div>
+        <div id="about-mount"></div>
+        <div id="professional-journey-mount"></div>
+        <div id="certificates-mount"></div>
+        <div id="projects-mount"></div>
+        <div id="resume-mount"></div>
+        <div id="get-in-touch-mount"></div>
+    </main>
 
-            <h3>Bridging Code & Aesthetics</h3>
-            <h1>Hi, I'm <span class="gradient-text">Jigar Chavda</span></h1>
-            <h2>I am a <span class="typing-text"></span></h2>
-            <p>Computer Science & Design undergraduate specializing in Frontend Engineering and User-Centric Architecture. I turn complex logic into fluid digital reality.</p>
-            <div class="hero-btns">
-                <div class="magnetic-wrap"><a href="#projects" class="btn btn-primary magnetic-btn">View My Work</a></div>
-                <div class="magnetic-wrap"><a href="#contact" class="btn btn-secondary magnetic-btn">Let's Talk</a></div>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="about-section">
-        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-        <div class="glass-card about-container">
-            <div class="about-text">
-                <p>I specialize in bridging the gap between technical system constraints and intuitive UI/UX design. My core focus lies in building secure, responsive web environments with a strong emphasis on client-side state management, interactive animation logic, and seamless front-end integration.</p>
-                
-                <h3 class="skills-heading">Technical Stack</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag"><i class="fab fa-html5"></i> HTML5 / CSS3</div>
-                    <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
-                    <div class="skill-tag"><i class="fab fa-node-js"></i> Node.js</div>
-                    <div class="skill-tag"><i class="fab fa-java"></i> Java</div>
-                    <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
-                    <div class="skill-tag"><i class="fas fa-code"></i> C Language</div>
-                    <div class="skill-tag"><i class="fab fa-figma"></i> Figma UI/UX</div>
-                    <div class="skill-tag"><i class="fas fa-wand-magic-sparkles"></i> Canva Design</div>
-                    <div class="skill-tag"><i class="fas fa-video"></i> Video Editing</div>
-                    <div class="skill-tag"><i class="fab fa-git-alt"></i> Git & GitHub</div>
-                    <div class="skill-tag"><i class="fab fa-microsoft"></i> MS Office (Word/Excel/PPT)</div>
-                    <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Android Studio</div>
-                    <div class="skill-tag"><i class="fab fa-google"></i> Google AI Studio</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="timeline" class="timeline-section">
-        <h2 class="section-title">Professional <span class="gradient-text">Journey</span></h2>
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
-
-            <div class="timeline-item left">
-                <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
-                <div class="glass-card timeline-content">
-                    <span class="timeline-date">2023 - Present</span>
-                    <h4>B.Tech in Computer Science & Design</h4>
-                    <p class="timeline-org">G H Patel College of Engineering & Technology</p>
-                    <p class="timeline-details">Balancing formal undergraduate systems logic with hands-on client-side engineering tasks. Maintaining a stable 7.68 CGPA track across ongoing semesters.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item right">
-                <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
-                <div class="glass-card timeline-content">
-                    <span class="timeline-date">May 20, 2026 - June 20, 2026</span>
-                    <h4>UI/UX Design Intern (1 Month)</h4>
-                    <p class="timeline-org">CodeAlpha</p>
-                    <p class="timeline-details" style="margin-bottom: 1.2rem;">Architected high-fidelity dynamic interface wireframes, custom behavioral clicking paths, and responsive typography tokens mapping seamless user navigation features for mobile applications.</p>
-                    
-                    <div class="magnetic-wrap" style="padding: 0;">
-                        <button type="button" class="p-link-btn cert-trigger" data-cert="JCCodeAlpha.png" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View Certificate
-                        </button>
-<button type="button" class="p-link-btn cert-trigger" data-cert="JCCodeAlphaLOR.png" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View LOR
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item left">
-                <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
-                <div class="glass-card timeline-content">
-                    <span class="timeline-date">May 11, 2026 - May 25, 2026</span>
-                    <h4>Web Development Intern (2 Weeks)</h4>
-                    <p class="timeline-org">InternPE</p>
-                    <p class="timeline-details" style="margin-bottom: 1.2rem;">Engineered responsive layout storefront patterns and functional mathematical calculation tools using pure client-side Vanilla JavaScript structures and grid design principles.</p>
-                    
-                    <div class="magnetic-wrap" style="padding: 0;">
-                        <button type="button" class="p-link-btn cert-trigger" data-cert="JCInternPe.png" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View Certificate
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="cert-modal" class="p-modal">
-        <div class="p-modal-overlay" id="cert-modal-overlay"></div>
-        <div class="p-modal-content glass-card" style="max-width: 800px; padding: 2rem; display: flex; flex-direction: column; align-items: center;">
-            <button class="p-close-btn" id="cert-modal-close-btn" style="top: 15px; right: 15px;"><i class="fas fa-times"></i></button>
-            <div style="width: 100%; height: auto; display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
-                <img id="cert-modal-img" src="" alt="Jigar Chavda Verification Credential" style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-            </div>
-        </div>
-    </div>
-
-    <section id="credentials" class="credentials-section" style="padding-top: 0;">
-        <div class="timeline-container">
-            <h3 class="skills-heading" style="text-align: center; margin-bottom: 2rem;">Continuous Upskilling & Certifications</h3>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                
-                <div class="glass-card timeline-content" style="border-left: 4px solid #10b981; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="timeline-date">SWAYAM NPTEL Academic Track | 2025</span>
-                        <h4 style="font-size: 1.15rem; margin-bottom: 0.2rem;"><i class="fas fa-cloud" style="color: #10b981; margin-right: 8px;"></i> Cloud Computing</h4>
-                        <p class="timeline-org" style="font-size: 0.88rem; margin-bottom: 0.8rem;">Ministry of Education, India</p>
-                        <p class="timeline-details" style="font-size: 0.85rem; margin-bottom: 1.5rem;">Earned a formal academic credential mapping enterprise virtualization architectures, distributed microservice infrastructures, and cloud load-balancing logic systems.</p>
-                    </div>
-                    
-                    <div class="magnetic-wrap" style="padding: 0; margin-top: auto; align-self: flex-start;">
-                        <button type="button" class="p-link-btn cert-trigger" data-cert="NPTELCC.png" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View Certificate
-                        </button>
-                    </div>
-                </div>
-
-                <div class="glass-card timeline-content" style="border-left: 4px solid #10b981; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="timeline-date">SWAYAM NPTEL Academic Track | 2026</span>
-                        <h4 style="font-size: 1.15rem; margin-bottom: 0.2rem;"><i class="fas fa-network-wired" style="color: #10b981; margin-right: 8px;"></i> Introduction to IoT</h4>
-                        <p class="timeline-org" style="font-size: 0.88rem; margin-bottom: 0.8rem;">Ministry of Education, India</p>
-                        <p class="timeline-details" style="font-size: 0.85rem; margin-bottom: 1.5rem;">Certified integration mapping physical sensor networks, controller telemetry arrays, protocol handling layers, and real-time data ingestion pipelines.</p>
-                    </div>
-                    
-                    <div class="magnetic-wrap" style="padding: 0; margin-top: auto; align-self: flex-start;">
-                        <button type="button" class="p-link-btn cert-trigger" data-cert="NPTELIoT.jpeg" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View Certificate
-                        </button>
-                    </div>
-                </div>
-
-                <div class="glass-card timeline-content" style="border-left: 4px solid #10b981; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="timeline-date">Infosys Springboard Hub | June 2026</span>
-                        <h4 style="font-size: 1.15rem; margin-bottom: 0.2rem;"><i class="fas fa-terminal" style="color: #10b981; margin-right: 8px;"></i> Prompt Engineering</h4>
-                        <p class="timeline-org" style="font-size: 0.88rem; margin-bottom: 0.8rem;">Infosys Professional Ecosystem</p>
-                        <p class="timeline-details" style="font-size: 0.85rem; margin-bottom: 1.5rem;">Mastered structured contextual prompting methods, advanced few-shot chain-of-thought logic frameworks, and system role engineering to safely minimize LLM hallucination limits.</p>
-                    </div>
-                    
-                    <div class="magnetic-wrap" style="padding: 0; margin-top: auto; align-self: flex-start;">
-                        <button type="button" class="p-link-btn cert-trigger" data-cert="ISBPE.png" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View Certificate
-                        </button>
-                    </div>
-                </div>
-
-                <div class="glass-card timeline-content" style="border-left: 4px solid #10b981; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="timeline-date">Kaggle AI Continuum | June 2026</span>
-                        <h4 style="font-size: 1.15rem; margin-bottom: 0.2rem;"><i class="fab fa-google" style="color: #10b981; margin-right: 8px;"></i> 5-Day AI Agents</h4>
-                        <p class="timeline-org" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.8rem; letter-spacing: -0.2px;">Intensive Vibe Coding Course With Google</p>
-                        <p class="timeline-details" style="font-size: 0.85rem; margin-bottom: 1.5rem;">Executed active cloud-inference agents utilizing Google ecosystem frameworks. Specialized in prompt design logic, functional calling trees, and autonomous workflow chains.</p>
-                    </div>
-                    
-                    <div class="magnetic-wrap" style="padding: 0; margin-top: auto; align-self: flex-start;">
-                        <button type="button" class="p-link-btn cert-trigger" data-cert="KWG.png" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View Certificate
-                        </button> <br> <br>
-                        <button type="button" class="p-link-btn cert-trigger" data-cert="KWGB.jpeg" style="background: rgba(16, 185, 129, 0.15); color: var(--text-primary); border: 1px solid var(--card-border); padding: 0.5rem 1.2rem; font-size: 0.82rem; border-radius: 12px; display: inline-flex; gap: 6px; font-weight: 700;">
-                            <i class="fas fa-certificate" style="color: #10b981;"></i> View Badge
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-        <div class="projects-grid">
-            <div class="glass-card project-card" data-project="tagkart">
-                <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
-                <h3>Tag Kart</h3>
-                <p>An intuitive multi-vendor e-commerce application prototype engineered to minimize user friction during transactional workflows.</p>
-                <div class="project-tags"><span>Figma</span><span>UI/UX</span><span>E-Commerce</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="glass-card project-card" data-project="smartattendance">
-                <div class="project-icon"><i class="fas fa-user-check"></i></div>
-                <h3>SmartAttendance</h3>
-                <p>An advanced facial recognition logging Android app utilizing local camera hardware pipelines for automated user check-ins.</p>
-                <div class="project-tags"><span>Java</span><span>TensorFlow Lite</span><span>CameraX</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="glass-card project-card" data-project="thoughtoftheday">
-                <div class="project-icon"><i class="fas fa-quote-left"></i></div>
-                <h3>Thought of the Day</h3>
-                <p>Built a dynamic tool that automates daily inspirational content display from integrated CSV databases using Vanilla JavaScript layout logic.</p>
-                <div class="project-tags"><span>JavaScript</span><span>CSV Parsing</span><span>Automation</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="glass-card project-card" data-project="calculator">
-                <div class="project-icon"><i class="fas fa-calculator"></i></div>
-                <h3>Simple Calculator</h3>
-                <p>A sleek, responsive mathematical calculator application developed during my InternPE web development internship using grid architectures.</p>
-                <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>InternPE Internship Task</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="glass-card project-card" data-project="internpe-ecommerce">
-                <div class="project-icon"><i class="fas fa-store"></i></div>
-                <h3>E-Commerce Storefront</h3>
-                <p>A lightweight, functional client-side retail storefront built during my InternPE tenure, tracking user product lists dynamically.</p>
-                <div class="project-tags"><span>JavaScript</span><span>UI Design</span><span>InternPE Internship Task</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="glass-card project-card" data-project="ca-lowfi">
-                <div class="project-icon"><i class="fas fa-pencil-ruler"></i></div>
-                <h3>Low-Fidelity Wireframes</h3>
-                <p>Initial structural blueprint mapping and core asset positioning layout for an Education Platform application.</p>
-                <div class="project-tags"><span>Figma</span><span>Wireframing</span><span>UX Mapping</span><span>CodeAlpha Internship Task</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="glass-card project-card" data-project="ca-hifi">
-                <div class="project-icon"><i class="fas fa-palette"></i></div>
-                <h3>High-Fidelity Interface</h3>
-                <p>Complete design translation of the Education app with comprehensive typography tokens, asset styling, and brand design patterns.</p>
-                <div class="project-tags"><span>Figma</span><span>UI Design</span><span>Visual Tokens</span><span>CodeAlpha Internship Task</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="glass-card project-card" data-project="ca-prototype">
-                <div class="project-icon"><i class="fas fa-route"></i></div>
-                <h3>Interactive UX Prototype</h3>
-                <p>A fully functional behavioral flow mapping user click paths, transitions, and component state changes for the Education application.</p>
-                <div class="project-tags"><span>Figma</span><span>Prototyping</span><span>Interaction Logic</span><span>CodeAlpha Internship Task</span></div>
-                <span class="view-more-lbl">Click to explore <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-    </section>
-
-    <div id="project-modal" class="p-modal">
-        <div class="p-modal-overlay" id="p-modal-close-overlay"></div>
-        <div class="p-modal-content glass-card">
-            <button class="p-close-btn" id="p-modal-close-btn"><i class="fas fa-times"></i></button>
-            <div id="p-modal-body"></div>
-        </div>
-    </div>
-
-    <section id="resume" class="resume-section">
-        <h2 class="section-title">Curriculum <span class="gradient-text">Vitae</span></h2>
-        <div class="resume-cta-container">
-            <div class="glass-card resume-cta-card">
-                <i class="fas fa-file-invoice resume-cta-icon"></i>
-                <h3>Interactive Document Viewer</h3>
-                <p>Click below to open my official academic and professional resume formatted into a production-ready document page layer.</p>
-                <div class="magnetic-wrap"><button class="btn btn-primary magnetic-btn" id="open-resume-btn">Open Interactive Resume <i class="fas fa-expand" style="margin-left: 10px;"></i></button></div>
-            </div>
-        </div>
-    </section>
-
-    <div id="resume-modal" class="modal">
-        <div class="modal-overlay" id="modal-overlay-close"></div>
-        <div class="modal-content glass-card">
-            <div class="modal-header">
-                <h2>Interactive <span class="gradient-text">Resume</span></h2>
-                <div class="modal-actions">
-                    <button class="modal-control-btn" onclick="window.print()" title="Print / Save as PDF">
-                        <i class="fas fa-print"></i>
-                    </button>
-                    <button class="modal-control-btn close-btn" id="close-resume-btn" title="Close Window">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="document-wrapper">
-                <div class="resume-document">
-                    <div class="doc-header">
-                        <div class="doc-title">
-                            <h1>Jigar Chavda</h1>
-                            <p class="doc-subtitle">Aspiring Frontend Engineer & UI/UX Designer</p>
-                        </div>
-                        <div class="doc-contact">
-                            <p><i class="fas fa-envelope"></i> </p>
-                            <p><i class="fas fa-phone-alt"></i> </p>
-                            <p><i class="fas fa-map-marker-alt"></i> Gujarat, India</p>
-                        </div>
-                    </div>
-
-                    <hr class="doc-divider">
-
-                    <div class="doc-body">
-                        <!-- LEFT MAIN COLUMN: Restores original arrangement loop -->
-                        <div class="doc-col-main">
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-user"></i> Professional Summary</h3>
-                                <p class="doc-summary-text">
-                                    Computer Science & Design undergraduate specializing in Frontend Engineering and User-Centric Architecture. I bridge the gap between technical system constraints and intuitive UI/UX design, focusing on building secure responsive environments with a primary emphasis on interaction logic and state management.
-                                </p>
-                            </div>
-
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-                                <div class="doc-item">
-                                    <div class="doc-item-header">
-                                        <h4>B.Tech in Computer Science and Design</h4>
-                                        <span class="doc-date">2023 - Present</span>
-                                    </div>
-                                    <p class="doc-org">G H Patel College of Engineering & Technology</p>
-                                    <p class="doc-grade">Academic Performance: <strong>7.68 CGPA</strong> (Up to Semester 6)</p>
-                                </div>
-                            </div>
-
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-briefcase"></i> Internships</h3>
-                                <div class="doc-item">
-                                    <div class="doc-item-header">
-                                        <h4>UI/UX Design Intern</h4>
-                                        <span class="doc-date">1 Month</span>
-                                    </div>
-                                    <p class="doc-org">CodeAlpha</p>
-                                    <p>Developed interactive wireframes, custom digital system components, and user flows optimized for core accessibility requirements.</p>
-                                </div>
-                                <div class="doc-item">
-                                    <div class="doc-item-header">
-                                        <h4>Web Development Intern</h4>
-                                        <span class="doc-date">2 Weeks</span>
-                                    </div>
-                                    <p class="doc-org">InternPE</p>
-                                    <p>Assembled responsive interface features using client-side vanilla scripting frameworks and performance auditing procedures.</p>
-                                </div>
-                            </div>
-
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-laptop-code"></i> Engineering Projects</h3>
-                                
-                                <div class="doc-item">
-                                    <div class="doc-item-header">
-                                        <h4>SmartAttendance Platform</h4>
-                                        <span class="doc-date">2026</span>
-                                    </div>
-                                    <p class="doc-org">Java / Android Studio / TensorFlow Lite</p>
-                                    <p>Engineered facial recognition check-ins using CameraX local pipelines.</p>
-                                </div>
-
-                                <div class="doc-item">
-                                    <div class="doc-item-header">
-                                        <h4>Ambient Expense Tracker</h4>
-                                        <span class="doc-date">2026</span>
-                                    </div>
-                                    <p class="doc-org">Google AI Studio / Google AI Agents Track</p>
-                                    <p>Built an autonomous financial tracker utilizing prompt chains and functional calling.</p>
-                                </div>
-
-                                <div class="doc-item">
-                                    <div class="doc-item-header">
-                                        <h4>Tag Kart E-Commerce Concept</h4>
-                                        <span class="doc-date">2025</span>
-                                    </div>
-                                    <p class="doc-org">Figma / Brand Design / Manual Brochure Design</p>
-                                    <p>Designed a multi-vendor prototype concept layout along with marketing brochures.</p>
-                                </div>
-
-                                <div class="doc-item">
-                                    <div class="doc-item-header">
-                                        <h4>Lime Cart E-Commerce Layout</h4>
-                                        <span class="doc-date">2026</span>
-                                    </div>
-                                    <p class="doc-org">HTML5 / CSS3 / Vanilla JavaScript</p>
-                                    <p>Developed a responsive layout online storefront during my InternPE tenure.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- RIGHT SIDEBAR COLUMN: Restores original side skills layout -->
-                        <div class="doc-col-side">
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-tools"></i> Hard Skills</h3>
-                                <div class="doc-sub-skill-category">
-                                    <h5>Languages</h5>
-                                    <p>C, Java, Python</p>
-                                </div>
-                                <div class="doc-sub-skill-category">
-                                    <h5>Frontend & Core</h5>
-                                    <p>HTML5, CSS3, Node.js, JavaScript</p>
-                                </div>
-                                <div class="doc-sub-skill-category">
-                                    <h5>Tools & IDEs</h5>
-                                    <p>Git, GitHub, Android Studio, VS Code, Figma, Canva Design</p>
-                                </div>
-                            </div>
-
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-brain"></i> Soft Competencies</h3>
-                                <ul class="doc-bullet-list">
-                                    <li>Critical Thinking & Logic</li>
-                                    <li>Team Collaboration</li>
-                                    <li>Interpersonal Communication</li>
-                                    <li>Resilience & Adaptability</li>
-                                    <li>Time Management</li>
-                                </ul>
-                            </div>
-
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-award"></i> Certifications</h3>
-                                <ul class="doc-bullet-list">
-                                    <li>Cloud Computing (SWAYAM NPTEL)</li>
-                                    <li>Introduction to IoT (SWAYAM NPTEL)</li>
-                                    <li>Prompt Engineering (Infosys Springboard)</li>
-                                    <li>5-Day AI Agents Track (Google / Kaggle)</li>
-                                </ul>
-                            </div>
-
-                            <div class="doc-section">
-                                <h3 class="doc-section-title"><i class="fas fa-external-link-alt"></i> Links</h3>
-                                <ul class="doc-bullet-list">
-                                    <li>linkedin.com/in/jigar-chavda-6b8322281</li>
-                                    <li>github.com/jmchavda2006-glitch</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
-        <div class="glass-card contact-container">
-            <div class="contact-social-channels">
-                <a href="https://github.com/jmchavda2006-glitch" target="_blank" class="contact-link-tag"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/jigar-chavda-6b8322281" target="_blank" class="contact-link-tag"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-            
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" name="from_name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="reply_to" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-
-                <div class="form-group" style="display: flex; justify-content: center; margin-bottom: 15px;">
-                    <div class="g-recaptcha" data-sitekey="6LeQZhstAAAAAF0-hS1B5tgJS3aI1DBjWoVRQXbM" data-theme="light"></div>
-                </div>
-
-                <div class="magnetic-wrap" style="width: 100%;">
-                    <button type="submit" id="contact-submit-btn" class="btn btn-primary magnetic-btn" style="width: 100%; margin: 0;">
-                        Send Message <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
-
+    <!-- Consolidated Brand Footer with Keyboard Shortcut Hints -->
     <footer class="site-footer">
-        <div class="magnetic-wrap" style="margin: 0 auto 1.2rem auto;">
-            <a href="#" class="footer-logo-btn magnetic-btn">
-                <img src="J.png" alt="Jigar Chavda Logo" class="footer-logo-img">
+        <div class="magnetic-wrap" style="margin: 0 auto 1rem auto;">
+            <a href="#hero" class="footer-logo-btn magnetic-btn" title="Back to top">
+                <img src="J.png" alt="Jigar Chavda Logo" class="footer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                <span class="logo-fallback-badge" style="display: none;">J</span>
             </a>
+        </div>
+        <div class="footer-shortcuts">
+            <span>Quick Shortcuts: Press <kbd class="kbd-badge">R</kbd> for Interactive Resume</span>
+            <span>&bull;</span>
+            <span>Press <kbd class="kbd-badge">T</kbd> to Toggle Theme</span>
         </div>
         <p class="footer-copyright">
             &copy; 2026 Jigar Chavda. All Rights Reserved.
         </p>
     </footer>
 
-    <button id="scroll-top-btn" class="scroll-top-fab" title="Scroll back to top">
+    <!-- Toast Notification Card -->
+    <div id="toast-notification" class="toast-card" role="status" aria-live="polite">
+        <i id="toast-icon" class="fas fa-check-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Floating Back-to-Top Button -->
+    <button type="button" id="scroll-top-btn" class="scroll-top-fab" title="Scroll back to top" aria-label="Scroll back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js"></script>
+    <!-- Modular Section Files (Edit any section independently!) -->
+    <script src="sections/home.js"></script>
+    <script src="sections/about.js"></script>
+    <script src="sections/professional-journey.js"></script>
+    <script src="sections/certificates.js"></script>
+    <script src="sections/projects.js"></script>
+    <script src="sections/resume.js"></script>
+    <script src="sections/get-in-touch.js"></script>
+
+    <!-- Main Portfolio Interaction & Animation Engine -->
+    <script src="js/main.js"></script>
 </body>
 </html>
