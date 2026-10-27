@@ -17,9 +17,6 @@ document.getElementById('get-in-touch-mount').innerHTML = `
                 <a href="https://linkedin.com/in/jigar-chavda-6b8322281" target="_blank" rel="noopener noreferrer" class="contact-link-tag">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <button type="button" id="copy-email-btn" class="contact-link-tag" title="Copy direct email address">
-                    <i class="fas fa-copy"></i> Copy Email
-                </button>
             </div>
             
             <form id="contact-form">
