@@ -4,8 +4,6 @@
 // Edit this file to update social profile links, email copy address, or form fields.
 // ==========================================================================
 
-window.PORTFOLIO_CONTACT_EMAIL = "jmchavda2006@gmail.com";
-
 document.getElementById('get-in-touch-mount').innerHTML = `
     <section id="contact" class="contact-section">
         <h2 class="section-title reveal-on-scroll">Get In <span class="gradient-text">Touch</span></h2>
