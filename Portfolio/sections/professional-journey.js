@@ -53,7 +53,7 @@ document.getElementById('professional-journey-mount').innerHTML = `
                     
                     <div class="timeline-actions">
                         <div class="magnetic-wrap" style="padding: 0;">
-                            <button type="button" class="p-link-btn credential-btn cert-trigger" data-cert="JCInternPe.PNG">
+                            <button type="button" class="p-link-btn credential-btn cert-trigger" data-cert="JCInternPe.png">
                                 <i class="fas fa-certificate"></i> View Certificate
                             </button>
                         </div>
