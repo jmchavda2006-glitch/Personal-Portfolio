@@ -21,7 +21,7 @@ document.getElementById('home-mount').innerHTML = `
 
             <div class="availability-pill">
                 <span class="status-pulse-dot"></span>
-                <span>Available for Internships &amp; Frontend / UI-UX Roles &bull; 2026</span>
+                <span>Available for 4–6 Month Internships (Frontend / UI-UX) &bull; Starting Jan 2027</span>
             </div>
 
             <h3>Bridging Code &amp; Aesthetics</h3>
